@@ -119,7 +119,8 @@ the server's WebSocket Realtime API (`/v1/realtime`) — a future upgrade, not w
 - **Safety:** transcription is imperfect; the skill tells Claude to confirm before doing
   anything destructive on a garbled instruction.
 
-See [ARCHITECTURE.md](ARCHITECTURE.md) for the full design.
+See [ARCHITECTURE.md](ARCHITECTURE.md) for the full design and [ROADMAP.md](ROADMAP.md) for
+what's next.
 
 ## Acknowledgements
 
