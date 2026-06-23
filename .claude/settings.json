@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(scripts/start.sh)",
+      "Bash(scripts/stop.sh)",
+      "Bash(bin/next_turn.sh:*)",
+      "Bash(bin/reply.sh:*)",
+      "Bash(cat runtime/*)"
+    ]
+  }
+}

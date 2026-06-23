@@ -1,0 +1,3 @@
+# Python deps for the mic listener. install.sh installs these into a local .venv.
+sounddevice>=0.4.6
+numpy>=1.24
