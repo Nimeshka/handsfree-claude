@@ -55,7 +55,7 @@ mic → listen.py ───────────────▶ runtime/inbox
 ## Install
 
 ```bash
-git clone https://github.com/<you>/handsfree-claude.git
+git clone https://github.com/Nimeshka/handsfree-claude.git
 cd handsfree-claude
 ./install.sh
 ```
