@@ -122,6 +122,21 @@ the server's WebSocket Realtime API (`/v1/realtime`) — a future upgrade, not w
 See [ARCHITECTURE.md](ARCHITECTURE.md) for the full design and [ROADMAP.md](ROADMAP.md) for
 what's next.
 
+## Privacy & security
+
+- **Runs fully on-device.** Audio is captured locally and sent only to a `speech-server`
+  bound to `127.0.0.1` — nothing is uploaded. No API keys, no telemetry.
+- **Local transcripts are plaintext.** Your speech and the spoken replies are logged to
+  `logs/*.log`, and the live message bus is in `runtime/*.jsonl`. These are git-ignored
+  (never published) but persist unencrypted on your machine. Clear them anytime:
+  ```bash
+  rm -f logs/*.log runtime/*.jsonl runtime/.inbox_cursor
+  ```
+- **Local trust boundary.** Any process that can write `runtime/inbox.jsonl` can inject text
+  into your Claude Code session — keep the project under your own user account.
+- **Mic lifecycle.** The microphone is live only during a `/cruise` session; the listener
+  auto-releases it within ~`cruise.idle_stop_seconds` (default 60s) of the session ending.
+
 ## Acknowledgements
 
 - [`soniqo/speech`](https://github.com/soniqo/speech) — the on-device Apple Silicon speech

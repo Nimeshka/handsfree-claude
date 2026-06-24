@@ -22,7 +22,7 @@ for c in python3.10 python3.11 python3.12 python3.13 python3; do
   fi
 done
 if [ -z "$PYBIN" ]; then
-  echo "  none found. On wifi, run:  python3 -m venv .venv && .venv/bin/pip install -r requirements.txt"
+  echo "  none found. Run ./install.sh (it creates a .venv with the deps)."
   ok=0
 fi
 

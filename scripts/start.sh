@@ -16,7 +16,7 @@ if [ -z "$PYBIN" ]; then
     fi
   done
 fi
-[ -n "$PYBIN" ] || { echo "No Python with sounddevice+numpy found. Run scripts/setup.sh (needs wifi)." >&2; exit 1; }
+[ -n "$PYBIN" ] || { echo "No Python with sounddevice+numpy found. Run ./install.sh first." >&2; exit 1; }
 echo "Using Python: $PYBIN"
 
 # --- speech-server (ASR). Reuse if already healthy; otherwise start + warm it. ---
